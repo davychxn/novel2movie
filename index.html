@@ -1,91 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>novel2movie.com is for sale</title>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f5f7fb;
-        color: #1f2937;
-        margin: 0;
-        padding: 40px 20px;
-      }
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Davy Chen — FullStack Developer</title>
+<meta name="description" content="Davy Chen is a full-stack developer in China building a one-click pipeline that turns novels and biographies into movies. Come in." />
+<meta name="author" content="Davy Chen" />
+<meta name="theme-color" content="#14100c" />
 
-      .container {
-        max-width: 700px;
-        margin: 0 auto;
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-        padding: 32px 28px;
-      }
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Davy Chen — FullStack Developer" />
+<meta property="og:description" content="Every novel already holds a film. Come in." />
+<meta name="twitter:card" content="summary_large_image" />
 
-      h1 {
-        margin-top: 0;
-        font-size: 2.2rem;
-        color: #111827;
-      }
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23b23a2c'/%3E%3Ctext x='50' y='70' font-size='56' font-family='Georgia,serif' fill='%23ffffff' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
 
-      p {
-        font-size: 1rem;
-        line-height: 1.6;
-      }
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="image/film-hero.webp" />
 
-      ul {
-        padding-left: 20px;
-        line-height: 1.8;
-      }
+<style>
+/* ============================================================
+   Tokens — kept identical to personal/index.html so the two
+   pages read as one site.
+   ============================================================ */
+:root {
+  --bg:            #faf7f2;
+  --bg-soft:       #f3ede3;
+  --surface:       #ffffff;
+  --text:          #1a1614;
+  --text-muted:    #6b6157;
+  --text-faint:    #948a7d;
+  --border:        #e6ddd0;
+  --border-strong: #d5c8b6;
+  --accent:        #b23a2c;
+  --accent-soft:   #f6e7e2;
+  --gold:          #a97d2a;
 
-      .contact-image-wrap {
-        margin: 18px 0 12px;
-      }
+  --night-1: #14100c;
+  --night-2: #241c15;
 
-      .contact-image {
-        display: block;
-        max-width: 25%;
-        height: auto;
-        border-radius: 8px;
-      }
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-      hr {
-        border: none;
-        border-top: 1px solid #e5e7eb;
-        margin: 24px 0;
-      }
+  --radius:    16px;
+  --radius-lg: 24px;
+  --maxw:      1120px;
+}
 
-      .domain {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #0f172a;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>novel2movie.com is for sale</h1>
+*, *::before, *::after { box-sizing: border-box; }
 
-      <p>This domain, <strong>novel2movie.com</strong>, is available for purchase.</p>
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
-      <ul>
-        <li><strong>Price:</strong> Negotiable</li>
-      </ul>
-      <ul>
-        <li><strong>Contact:</strong> 
-          <div class="contact-image-wrap">
-            <img class="contact-image" src="image/contact.png" alt="Contact information" />
-          </div>
-        </li>
-      </ul>
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
-      <p>For purchasing or renting inquiries, please reach out through above email.</p>
+h1, h2 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; letter-spacing: -.025em; margin: 0; }
+p { margin: 0; }
+img { max-width: 100%; display: block; }
 
-      <hr />
+::selection { background: color-mix(in srgb, var(--accent) 30%, transparent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-      <div class="domain">novel2movie.com</div>
+.wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
-      <p>A domain opportunity for buyers interested in a concise, memorable, and relevant name in the entertainment and adaptation space.</p>
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+}
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; opacity: .5; }
+
+/* ============================================================
+   Cover — full-bleed cinematic entry
+   ============================================================ */
+.cover {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.cover img.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 50%;
+  z-index: -2;
+  animation: slow-zoom 22s ease-out both;
+}
+@keyframes slow-zoom {
+  from { transform: scale(1.07); }
+  to   { transform: scale(1); }
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(70% 60% at 50% 42%, rgba(20, 16, 12, .18), transparent 70%),
+    linear-gradient(180deg, rgba(20, 16, 12, .42) 0%, rgba(20, 16, 12, .26) 38%, rgba(20, 16, 12, .82) 100%);
+}
+
+.cover-inner {
+  width: 100%;
+  max-width: 780px;
+  padding: 96px 24px 140px;
+  text-align: center;
+  color: #f7f1e8;
+}
+
+.cover .eyebrow {
+  color: rgba(247, 241, 232, .78);
+  margin-bottom: 1.6rem;
+  justify-content: center;
+}
+.cover .eyebrow::after { content: ""; width: 26px; height: 1px; background: currentColor; opacity: .5; }
+
+.cover h1 {
+  font-size: clamp(2.4rem, 6.4vw, 4.2rem);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, .45);
+  margin-bottom: 1.3rem;
+}
+.cover h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: #e8b467;
+}
+
+.cover .lede {
+  font-size: clamp(1rem, 2.1vw, 1.13rem);
+  line-height: 1.65;
+  color: rgba(247, 241, 232, .82);
+  max-width: 46ch;
+  margin: 0 auto 2.4rem;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .5);
+}
+
+/* the single button */
+.enter {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .95rem 1.7rem;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: .97rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  border: 1px solid rgba(255, 255, 255, .55);
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255,255,255,.6);
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+.enter svg { width: 17px; height: 17px; transition: transform .22s ease; }
+.enter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255,255,255,.6);
+}
+.enter:hover svg { transform: translateX(3px); }
+.enter:active { transform: translateY(0); }
+
+.cover-hint {
+  position: absolute;
+  bottom: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(247, 241, 232, .55);
+  animation: bob 2.6s ease-in-out infinite;
+}
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); opacity: .55; }
+  50%      { transform: translate(-50%, 6px); opacity: 1; }
+}
+
+/* film perforation strip along the bottom edge of the cover */
+.perf {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 40px;
+  z-index: 2;
+  background:
+    repeating-linear-gradient(90deg,
+      rgba(250, 247, 242, .16) 0 22px,
+      transparent 22px 46px);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 60%);
+          mask-image: linear-gradient(180deg, transparent, #000 60%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   Gallery — stills from the cutting room
+   ============================================================ */
+.gallery { padding: 92px 0 100px; }
+
+.gallery-head { max-width: 640px; margin-bottom: 2.6rem; }
+.gallery-head .eyebrow { color: var(--accent); margin-bottom: 1rem; }
+.gallery-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin-bottom: .7rem; }
+.gallery-head p { color: var(--text-muted); font-size: 1.02rem; }
+
+.stills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.still {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(60,44,30,.05), 0 18px 40px -22px rgba(60,44,30,.3);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.still:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 2px 4px rgba(60,44,30,.06), 0 26px 54px -24px rgba(60,44,30,.38);
+}
+.still figure { margin: 0; }
+.still img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.still:hover img { transform: scale(1.035); }
+.still figcaption { padding: 18px 20px 20px; border-top: 1px solid var(--border); }
+.still .t {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -.015em;
+  display: block;
+  margin-bottom: .2rem;
+}
+.still .d { font-size: .87rem; color: var(--text-muted); display: block; }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 26px 0 34px;
+}
+.footer .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  flex-wrap: wrap;
+  font-size: .84rem;
+  color: var(--text-faint);
+}
+
+/* ============================================================
+   Reveal
+   ============================================================ */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 860px) {
+  .stills { grid-template-columns: 1fr; }
+  .still img { aspect-ratio: 16 / 10; }
+  .gallery { padding: 72px 0 80px; }
+  .cover-inner { padding-bottom: 120px; }
+  .cover-hint { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ====================== COVER ====================== -->
+<header class="cover">
+  <img class="bg" src="image/film-hero.webp" alt="A strip of 35mm film rising out of an open hardcover book" fetchpriority="high" />
+
+  <div class="cover-inner">
+    <span class="eyebrow">Davy Chen &nbsp;·&nbsp; FullStack Developer &nbsp;·&nbsp; China</span>
+
+    <h1>Every novel already<br />holds a <em>film</em>.</h1>
+
+    <p class="lede">
+      This is the front door. Inside: who I am, what I build, and the one-click
+      pipeline I'm building to turn the books I love into the films I want to watch.
+    </p>
+
+    <a class="enter" href="personal/index.html">
+      Enter the site
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
+    </a>
+  </div>
+
+  <span class="cover-hint" aria-hidden="true">Scroll for stills</span>
+  <div class="perf" aria-hidden="true"></div>
+</header>
+
+<main>
+
+  <!-- ====================== GALLERY ====================== -->
+  <section class="gallery">
+    <div class="wrap">
+
+      <div class="gallery-head reveal">
+        <span class="eyebrow">Stills</span>
+        <h2>From the cutting room</h2>
+        <p>
+          A few frames from the world this site is about — light, celluloid, and the
+          books that start it all.
+        </p>
+      </div>
+
+      <div class="stills">
+
+        <figure class="still reveal">
+          <img src="image/film-strip.webp" alt="Macro photograph of a blank 35mm film strip backlit on an amber lightbox" loading="lazy" decoding="async" />
+          <figcaption>
+            <span class="t">35mm, blank and waiting</span>
+            <span class="d">Every frame starts empty. That's the whole appeal.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="still reveal">
+          <img src="image/cinema-seats.webp" alt="Rows of empty burgundy velvet cinema seats lit by warm amber light" loading="lazy" decoding="async" />
+          <figcaption>
+            <span class="t">Two hundred empty seats</span>
+            <span class="d">Somewhere in this room, the premiere is already scheduled.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="still reveal">
+          <img src="image/reel-books.webp" alt="A vintage film reel, a wooden clapperboard and a stack of old hardcover books on cream linen" loading="lazy" decoding="async" />
+          <figcaption>
+            <span class="t">Reel, slate, spines</span>
+            <span class="d">The whole kit: what I read in the evening, what I ship by day.</span>
+          </figcaption>
+        </figure>
+
+      </div>
     </div>
-  </body>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Davy Chen — FullStack Developer · China</span>
+    <span>Reading books. Rendering films.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var y = document.getElementById("year");
+  if (y) y.textContent = String(new Date().getFullYear());
+
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry, i) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      window.setTimeout(function () { el.classList.add("in"); }, Math.min(i * 90, 270));
+      io.unobserve(el);
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+</body>
 </html>
